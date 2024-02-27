@@ -1,0 +1,71 @@
+// MapArray
+
+const characters = [
+    {
+        name: 'Luke Skywalker',
+        height: '172',
+        mass: '77',
+        eye_color: 'blue',
+        gender: 'male',
+    },
+    {
+        name: 'Darth Vader',
+        height: '202',
+        mass: '136',
+        eye_color: 'yellow',
+        gender: 'male',
+    },
+    {
+        name: 'Leia Organa',
+        height: '150',
+        mass: '49',
+        eye_color: 'brown',
+        gender: 'female',
+    },
+    {
+        name: 'Anakin Skywalker',
+        height: '188',
+        mass: '84',
+        eye_color: 'blue',
+        gender: 'male',
+    },
+];
+
+// - Get an array of all names
+
+AllNames = characters.map((names)=>{
+    return names.name
+})
+
+console.log(`1. Get an array of all names: ${AllNames} `);
+
+// - Get an array of all heights
+
+Allheights = characters.map((heights)=>{
+    return heights.height
+})
+
+console.log(`2. Get an array of all heights: ${Allheights}`)
+
+// - Get an array of objects with just name and height properties
+
+let NameAndHeight = characters.map((characters)=>{
+    return {
+        name: characters.name,
+        height: characters.height,
+    };
+});
+
+console.log('3. Objects with just name and height properties:')
+console.log(NameAndHeight)
+
+// - Get an array of all first names
+
+AllFirstName = characters.map((first)=>{
+    return{
+        first_Name: first.name.split(" ")[0]
+    }
+})
+
+console.log("4. array of all first names:")
+console.log(AllFirstName)
